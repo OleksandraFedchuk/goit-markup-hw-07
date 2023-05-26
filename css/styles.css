@@ -66,6 +66,8 @@ letter-spacing: 0.02em;
 }
 
 /* ----------------header -------------------------*/
+
+
 .container {
     min-width: 396px;
     max-width: 428px;
@@ -319,11 +321,29 @@ background-size: cover;
 }
 
 /*---------Strategy, section2----------*/
+.container-strategy {
+    display: flex;
+    max-width: 1128px;
+}
 
-.strategy-list {
-padding-top: 120px ;
+
+
+.strategy-list{
+    padding: 91px 16px;
+}
+
+@media only screen and (min-width:768px){
+    .strategy-list{
+    padding-top: 96px;
+    padding-bottom: 96px;
+    }
+}
+
+@media only screen and (min-width:1200px){
+.strategy-list{
+    padding-top: 120px ;
 padding-bottom: 120px;
-
+}
 }
 
 .icons-container{
@@ -345,6 +365,7 @@ padding-bottom: 120px;
 .strategy-item {
 width: 396px;
 }
+
 
 @media only screen and (min-width:768px){
     .strategy-item{
