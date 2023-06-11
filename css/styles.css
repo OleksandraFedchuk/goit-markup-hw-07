@@ -12,7 +12,6 @@
     --anim-f: 200ms ease-in;
     --anim-s: 800ms ease;
 
-
 }
 
 /* .post:nth-child(1) {
@@ -326,8 +325,6 @@ background-size: cover;
     max-width: 1128px;
 }
 
-
-
 .strategy-list{
     padding: 91px 16px;
 }
@@ -357,35 +354,57 @@ padding-bottom: 120px;
     margin-bottom: 8px;
 }
 
+@media only screen and (max-width:1200px){
+    .icons-container{
+        display: none;
+    }
+}
+
 .strategy-list-content {
     display: flex;
     flex-wrap: wrap;
     gap:72px 24px;
 }
-.strategy-item {
-width: 396px;
-}
 
+
+@media only screen and (min-width:428px) and (max-width:768px){
+.strategy-item{
+    width: 396px;
+}
+}
 
 @media only screen and (min-width:768px){
     .strategy-item{
-        width: 356px;
+        flex-basis:calc((100% - 24px) / 2);
     }
 }
+
 @media only screen and (min-width: 1200px){
     .strategy-item{
-        width: 264px;
+        flex-basis:calc((100% - 96px) / 4);
     }
 }
 
 .strategy-title {
-    font-weight: 700;
+font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
 margin-bottom: 8px;
 letter-spacing: 0.02em;
 color: var(--second-title-color);
 }
+
+@media only screen and (min-width:428px){
+    .strategy-title{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .strategy-title{
+        display: flex;
+    }
+} 
 
 @media only screen and (min-width:1200px){
 .strategy-title{
@@ -403,8 +422,6 @@ color: #434455;
 
 }
 
-
-    
 
 /* --------------------What are we doing, perfomnce section 3------------------- */
 .perfomance {
