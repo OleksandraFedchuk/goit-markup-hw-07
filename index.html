@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- header -->
-      <!-- <header class="header" data-header>
+      <header class="header" data-header>
         <div class="container container-header">
          <nav class="navigation-list">
           <a href="./index.html" class="main-logo link">Web<span class="main-logo-studio link">Studio</span></a>
@@ -23,14 +23,63 @@
           <li class="navigation"><a class="header-link link" href="">Contacts</a></li>
          </ul>
          </nav>
+         <button class="modal-open-btn js-open-menu" 
+                type="button" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu">
+          <svg class="modal-open-btn-icon" width="32" height="32">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+         </button>
          <address class="adress">
         <ul class="info list" >
         <li class="mail .contacts"><a href="mailto:info@devstudio.com" class="mail-link link">info@devstudio.com</a></li>
         <li class="tel .contacts"><a href="tel:+110001111111" class="mail-link link">+11 (000) 111-11-11 </a></li>
     </ul>
     </address>
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="container menu-container">
+        <button class="mobile-close-btn js-close-menu" >
+          <svg class="mobile-close-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-iconn"></use>
+          </svg>
+        </button>
+        <ul class="menu-list list">
+          <li class="menu-item"><a class="menu-link link menu-active" href="./index.html">Studio</a></li>
+          <li class="menu-item"><a class="menu-link link" href="./portfolio.html">Portfolio</a></li>
+          <li class="menu-item"><a class="menu-link link" href="">Contacts</a></li>
+         </ul>
+         <ul class="dialing list" >
+          <li class="dialing-item"><a href="tel:+110001111111" class="mail-link link dialing-tel">+11 (000) 111-11-11 </a></li>
+          <li class="mail .contacts "><a href="mailto:info@devstudio.com" class="mail-link link dialing-mail">info@devstudio.com</a></li>
+          
+      </ul>
+      <ul class="team-soc-list menu-socials list">
+        <li class="team-soc-item"><a href="" class="menu-socials-link link">
+          <svg width="16" height="16" class="team-soc-icon">
+            <use href="./images/icons.svg#icon-ig-ik"></use>
+          </svg>
+        </a></li>
+        <li class="team-soc-item"><a href="" class="menu-socials-link link">
+          <svg width="16" height="16" class="team-soc-icon">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </a></li>
+        <li class="team-soc-item"><a href="" class="menu-socials-link link">
+          <svg width="16" height="16" class="team-soc-icon">
+            <use href="./images/icons.svg#icon-facebook"></use>
+          </svg>
+        </a></li>
+        <li class="team-soc-item"><a href="" class="menu-socials-link link">
+          <svg width="16" height="16" class="team-soc-icon">
+            <use href="./images/icons.svg#icon-linkedin"></use>
+          </svg>
+        </a></li>
+      </ul>
+      </div>
+    </div>
   </div>
-    </header> -->
+    </header>
   <!-- Головний контент,секція1 -->
       <!-- <main> 
         <section class="descrition">
@@ -361,6 +410,7 @@
 <!----------------SCRIPT------------------- -->
 <script src="./js/header.js"></script>
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
 

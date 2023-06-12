@@ -11,6 +11,7 @@
     /*         ANIMATION        */
     --anim-f: 200ms ease-in;
     --anim-s: 800ms ease;
+    --anim-default: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -73,6 +74,12 @@ letter-spacing: 0.02em;
     padding: 0 16px;
     margin: 0 auto;
     outline: 1px solid #404bbf;
+}
+
+@media only screen and (min-width:428px){
+    .container{
+        width:428px;
+    }
 }
 
 @media only screen and (min-width:768px){
@@ -169,7 +176,16 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     gap: 40px;
     margin-left: 76px;
    
+}
 
+@media only screen and (max-width:767px) {
+    .header-list{
+        display:none;
+    }
+
+    .adress{
+        display: none;
+    }
 }
 
 
@@ -208,7 +224,148 @@ color: var(--seventh-color);
 
 }
 
+@media only screen and (max-width:767px) {
+    .modal-open-btn{
+        margin-left:auto;
+        border:0;
+        background-color: transparent;
+        padding: 0;
+        line-height:0 ;
+        display: block;
+        padding: 24px ;
+    }
 
+    .modal-open-btn-icon {
+        fill: var(--second-title-color);
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-title-color);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity var(--anim-default), visibility var(--anim-default);
+        padding: 24px;
+    }
+
+    .menu-container{
+        position: relative;
+        padding: 55px 11px 16px 16px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+   .mobile-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #e7e9fc;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--anim-default), border var(--anim-default);
+   }
+
+   .mobile-close-btn{
+    fill: var(--second-title-color);
+    transition: fill var(--anim-default);
+   }
+
+   .mobile-close-btn:is(:hover, :focus){
+    background-color: var(--seventh-color);
+    border: none;
+   }
+
+   .mobile-close-btn:hover>.mobile-close-btn-icon,
+   .mobile-close-btn:focus>.mobile-close-btn-icon {
+     fill: var(--main-title-color);
+   }
+.menu-item:not(:last-child){
+    margin-bottom: 40px;
+}
+.menu-link{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: var(--second-title-color);
+    transition: color var(--anim-default);
+}
+.menu-active{
+    color: var(--seventh-color);
+}
+
+.menu-item>.menu-link:is(:hover, :focus){
+    color:var(--seventh-color);
+}
+
+.menu-list{
+    margin-bottom: auto;
+}
+
+.dialing-tel{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+.dialing-item{
+    margin-bottom: 40px;
+}
+.dialing-mail{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--third-title-color);
+    transition: color var(--anim-default);
+}
+.dialing {
+    margin-bottom: 48px;
+  }
+.menu-socials{
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+}
+.menu-socials-link{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--sixth-color);
+    transition: background-color var(--anim-default);
+}
+.menu-socials-link:is(:hover, :focus){
+    background-color: var(--seventh-color);
+}
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+@media only screen and (min-width:768px) {
+    .mobile-menu{
+        display: none;
+    }
+}
 
 .adress {
 font-style:normal;
@@ -257,9 +414,7 @@ align-content: center;
     color: #404bbf;
 }
 
-.tel{
 
-}
 /* !<!-- Головний контент,секція1 --> */
 
 .descrition {
