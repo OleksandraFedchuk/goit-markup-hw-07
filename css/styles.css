@@ -69,16 +69,18 @@ letter-spacing: 0.02em;
 
 
 .container {
-    min-width: 396px;
-    max-width: 428px;
+    width: 100%;
+    /* min-width: 396px;
+    max-width: 428px; */
     padding: 0 16px;
-    margin: 0 auto;
     outline: 1px solid #404bbf;
 }
+
 
 @media only screen and (min-width:428px){
     .container{
         width:428px;
+        margin: 0 auto;
     }
 }
 
