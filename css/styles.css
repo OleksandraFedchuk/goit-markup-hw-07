@@ -73,7 +73,7 @@ letter-spacing: 0.02em;
     /* min-width: 396px;
     max-width: 428px; */
     padding: 0 16px;
-    outline: 1px solid #404bbf;
+    /* outline: 1px solid #404bbf; */
 }
 
 
@@ -421,7 +421,28 @@ align-content: center;
 
 .descrition {
 
+background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobal-photo/Dark-bg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-color: var(--second-title-color);
+padding-top: 112px;
+padding-bottom: 112px;
+margin-right: auto;
 margin-left: auto;
+margin-top: 70px;
+max-width: 1440px;
+
+}
+
+@media screen and (min-width:1158px) {
+    .descrition{
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+    
+}
+/* margin-left: auto;
 margin-right: auto;
 padding-top: 188px;
 padding-bottom: 188px;
@@ -432,9 +453,38 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7))
 ,url(../images/bg.jpg);
 background-repeat: no-repeat;
 background-position: center ;
-background-size: cover;
+background-size: cover; */
 
-}
+@media screen and (max-width:767px) {
+  
+    .descrition-title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.11;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: var(--main-title-color);
+      max-width: 320px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 72px;
+    }
+  }
+
+  @media screen and (min-device-pixel-ratio) and (max-width:767px),
+         screen and (min-resolution: 192dpi) and (max-width:767px),
+         screen and (min-resolution: 2dppx) and (max-width:767px)  {
+    .descrition{
+        background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobal-photo/Dark-bg@2x.jpg);
+    } 
+  }
+
+  @media screen and (min-width:768px) {
+    .descrition{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-photo/bg-tab.jpg);
+    }
+  }
 
 .descrition-title {
     font-size: 56px;
@@ -442,11 +492,27 @@ background-size: cover;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--main-title-color);
-    width: 496px;
+    max-width: 496px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
 
+}
+
+@media screen and (min-device-pixel-ratio) and (min-width:768px),
+       screen and (min-resolution: 192dpi) and (min-width: 768px),
+       screen and (min-resolution: 2dppx) and (min-width: 768px) {
+        .descrition{
+            background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+            url(../images/tablet-photo/bg-tab@2x.jpg);
+        }
+}
+
+@media screen and (min-width:1158px) {
+    .descrition{
+        background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/desk-top-photo/bg.jpg);
+    }
 }
 .description-btn {
     background-color: #4D5AE5;
