@@ -647,29 +647,44 @@ color: #434455;
 
 
 /* --------------------What are we doing, perfomnce section 3------------------- */
-.perfomance {
-    padding-bottom: 120px;
-    padding-top: 0;
-
-}
-.perfomance-title {
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    text-transform: capitalize; 
-    letter-spacing: 0.02em;
-    color: var(--second-title-color);
-    padding-top: 0;
+@media screen and (min-width:1158px) {
+    .perfomance-title {
+        font-size: 36px;
+        line-height: 1.11;
+        text-align: center;
+        text-transform: capitalize; 
+        letter-spacing: 0.02em;
+        color: var(--second-title-color);
+        padding-top: 0;
+        margin-bottom: 72px;
+    } 
 }
 
-.perfomance-list {
-    display: flex;
-    gap: 24px;
-    margin-top: 72px;
+@media screen and (max-width: 1157px) {
+    .perfomance {
+        display: none;
+    }    
 }
-.perfomance-item {
-    width: calc((100% - 48px) / 3);
+
+@media screen and (min-width: 1158px) {
+    .perfomance-list{
+      display: flex;
+      gap: 24px;
+    }
+    .perfomance-item {
+        width: calc((100% - 48px) / 3);
+    }
+    .perfomance {
+        padding-bottom: 120px;
+        padding-top: 0;
+    
+    }
 }
+
+
+
+
+
 
 /* --------------------------------Our team, section 4 ------------------------- */
 
