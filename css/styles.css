@@ -1136,9 +1136,6 @@ color: var(--main-title-color);
     .footer-form-wrap{
         margin-left: 0;
     }
-    .footer-form{
-        display: flex;
-    }
     .footer-btn{
         margin: 0;
     }
