@@ -117,11 +117,13 @@ transition: background-color var(--anim-s), backdrop-filter var(--anim-s);
 
 @media screen and (max-width:767px) {
     .container-header{
-        padding-top: 24px;
-        padding-bottom: 24px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .main-logo{
+        padding-top: 24px;
+        padding-bottom:24px ;
     }
     
 }
@@ -141,9 +143,16 @@ line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4D5AE5;
-padding: 0px; 
+/* padding: 0px;  */
 transition: fill var(--anim-s) ;
 
+}
+
+@media screen and (min-width:1158px){
+    .main-logo{
+        padding: 0;
+        margin-right: 66px;
+    }
 }
 
 .main-logo-studio {
@@ -179,7 +188,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-left: 76px;
+    /* margin-left: 76px; */
    
 }
 
@@ -237,12 +246,12 @@ color: var(--seventh-color);
         padding: 0;
         line-height:0 ;
         display: block;
-        padding: 24px ;
     }
 
     .modal-open-btn-icon {
         fill: var(--second-title-color);
     }
+
 
     .mobile-menu {
         position: fixed;
@@ -256,7 +265,9 @@ color: var(--seventh-color);
         visibility: hidden;
         pointer-events: none;
         transition: opacity var(--anim-default), visibility var(--anim-default);
-        padding: 24px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
     }
 
     .menu-container{
@@ -267,7 +278,6 @@ color: var(--seventh-color);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        overflow-y: scroll;
         margin: 0 auto;
         
     }
@@ -326,12 +336,15 @@ color: var(--seventh-color);
     margin-bottom: auto;
 }
 
+
 .dialing-tel{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+
+
 }
 .dialing-item{
     margin-bottom: 40px;
@@ -348,6 +361,7 @@ color: var(--seventh-color);
     margin-bottom: 48px;
   }
 .menu-socials{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 56px;
@@ -385,11 +399,32 @@ color: var(--seventh-color);
         flex-direction: column;
         gap: 12px;
     }
+.mail-link{
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.16px;
+}
+}
+
+@media screen and (min-width:768px) and (max-width:1157px) {
     .main-logo{
         margin-right: 120px;
     }
-}
 
+.mail-link {
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.16px;
+    letter-spacing: 0.02em;
+    color: var(--third-title-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mail-link:is(:hover, :focus) {
+    color: #404bbf;
+}
+}
 
 @media only screen and (min-width: 1158px) {
     .container-header{
@@ -403,6 +438,17 @@ color: var(--seventh-color);
     justify-content: flex-end;
     align-content: center;
     gap: 40px;
+}
+.mail-link {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+.mail-link:is(:hover, :focus) {
+    color: #404bbf;
 }
 }
 .adress {
@@ -455,6 +501,13 @@ padding-bottom: 112px;
 margin: 0 auto;
 max-width: 428px;
 
+}
+
+@media screen and (min-width:728px){
+    .descrition{
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
 }
 
 @media screen and (min-width:1158px) {
@@ -672,12 +725,18 @@ color: var(--second-title-color);
 }
 }
 .strategy-text {
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
 
+}
+
+@media screen and (min-width:1158px) {
+    .strategy-text{
+        font-weight: 400;
+    }
 }
 
 
@@ -841,7 +900,7 @@ margin-bottom: 8px; ;
 
 @media screen and(min-width:768px) and (max-width:1157px) {
     .customers-container{
-        max-width: 584px;
+        width: 552px;
     }
     
 }
@@ -1235,9 +1294,18 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
+@media screen and (max-width:427px) {
+    .modal{
+        width: 100%;
+    }
+    
+}
+
 @media screen and (min-width:428px) and (max-width:767px) {
     .modal{
         width:392px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
